@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parthedits | Video Editor & Content Creator Portfolio</title>
+  <meta name="description" content="Official portfolio of Parth Solanki (Parthedits) - Professional Video Editor, Storyteller & Content Creator specializing in YouTube Shorts, Commercials, Marvel Edits, and High-CTR Thumbnails.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/clean/hero-badge.png">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#a6312e',
+              glow: '#e11d48',
+              dark: '#080808',
+              surface: '#111114'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#080808] text-zinc-100 selection:bg-red-600 selection:text-white relative">
+
+  <!-- ======================================================== -->
+  <!-- NAVIGATION BAR -->
+  <!-- ======================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-[#080808]/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-950 p-0.5 shadow-[0_0_15px_rgba(225,29,72,0.4)] group-hover:shadow-[0_0_22px_rgba(225,29,72,0.7)] transition-all duration-300">
+          <div class="w-full h-full bg-black rounded-[10px] flex items-center justify-center font-anton text-xl text-red-500 tracking-wider">
+            P
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-anton text-xl tracking-wider uppercase text-white group-hover:text-red-400 transition-colors">
+            PARTH<span class="text-red-600">EDITS</span>
+          </span>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-zinc-500 -mt-1">Video Editor</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-zinc-300">
+        <a href="#about" class="nav-link hover:text-red-400 transition-colors">About</a>
+        <a href="#journey" class="nav-link hover:text-red-400 transition-colors">Journey</a>
+        <a href="#client-work" class="nav-link hover:text-red-400 transition-colors">Client Work</a>
+        <a href="#personal-work" class="nav-link hover:text-red-400 transition-colors">Marvel & Edits</a>
+        <a href="#long-form-work" class="nav-link hover:text-red-400 transition-colors">Trailers & Long Form</a>
+        <a href="#thumbnails-section" class="nav-link hover:text-red-400 transition-colors">Thumbnails</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button class="copy-email-btn px-4 py-2 rounded-xl bg-zinc-900 text-zinc-300 hover:text-white text-xs font-semibold border border-white/10 hover:border-red-500/40 transition-all flex items-center gap-2">
+          <svg class="w-3.5 h-3.5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+          </svg>
+          <span>Copy Email</span>
+        </button>
+        <a href="#contact" class="glow-red-button px-5 py-2.5 rounded-xl text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+          <span>Let's Talk</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-400 hover:text-white focus:outline-none" aria-label="Toggle Navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0d0d10] border-b border-white/10 px-6 py-6 space-y-4">
+      <a href="#about" class="mobile-nav-link block text-zinc-300 hover:text-red-400 font-semibold text-base py-1">About</a>
+      <a href="#journey" class="mobile-nav-link block text-zinc-300 hover:text-red-400 font-semibold text-base py-1">Journey</a>
+      <a href="#client-work" class="mobile-nav-link block text-zinc-300 hover:text-red-400 font-semibold text-base py-1">Client Work</a>
+      <a href="#personal-work" class="mobile-nav-link block text-zinc-300 hover:text-red-400 font-semibold text-base py-1">Marvel & Edits</a>
+      <a href="#long-form-work" class="mobile-nav-link block text-zinc-300 hover:text-red-400 font-semibold text-base py-1">Trailers & Long Form</a>
+      <a href="#thumbnails-section" class="mobile-nav-link block text-zinc-300 hover:text-red-400 font-semibold text-base py-1">Thumbnails</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <button class="copy-email-btn w-full py-2.5 rounded-xl bg-zinc-900 text-zinc-300 text-xs font-semibold border border-white/10 flex items-center justify-center gap-2">
+          <span>Copy Email Address</span>
+        </button>
+        <a href="#contact" class="mobile-nav-link glow-red-button w-full py-3 rounded-xl text-center text-white text-xs font-bold uppercase tracking-wider">
+          Let's Work Together
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================== -->
+    <!-- SECTION 1: HERO / COVER -->
+    <!-- ======================================================== -->
+    <section id="hero" class="relative min-h-screen pt-32 pb-20 flex flex-col justify-center items-center overflow-hidden px-4">
+      
+      <!-- Ambient Red Glows -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-red-600/15 blur-[120px] rounded-full pointer-events-none"></div>
+      <div class="absolute top-1/3 left-10 w-[300px] h-[300px] bg-red-900/20 blur-[100px] rounded-full pointer-events-none"></div>
+      <div class="absolute bottom-20 right-10 w-[300px] h-[300px] bg-red-700/15 blur-[100px] rounded-full pointer-events-none"></div>
+
+      <!-- Floating 3D Software Badges (Decorations from original Canva design) -->
+      <div class="hidden lg:block absolute top-36 left-16 w-20 h-20 animate-float-1 filter drop-shadow-[0_10px_20px_rgba(225,29,72,0.3)]">
+        <img src="assets/clean/adobe-after-effects.png" alt="After Effects" class="w-full h-full object-contain">
+      </div>
+      <div class="hidden lg:block absolute bottom-36 left-28 w-24 h-24 animate-float-2 filter drop-shadow-[0_10px_20px_rgba(225,29,72,0.3)]">
+        <img src="assets/clean/adobe-premiere.png" alt="Premiere Pro" class="w-full h-full object-contain">
+      </div>
+      <div class="hidden lg:block absolute top-40 right-20 w-20 h-20 animate-float-3 filter drop-shadow-[0_10px_20px_rgba(225,29,72,0.3)]">
+        <img src="assets/clean/adobe-photoshop.png" alt="Photoshop" class="w-full h-full object-contain">
+      </div>
+      <div class="hidden lg:block absolute bottom-44 right-28 w-20 h-20 animate-float-4 filter drop-shadow-[0_10px_20px_rgba(225,29,72,0.3)]">
+        <img src="assets/clean/adobe-audition.png" alt="Audition" class="w-full h-full object-contain">
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-zinc-900/90 border border-white/10 shadow-lg mb-8 hover:border-red-500/40 transition-all">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-xs font-semibold tracking-wide text-zinc-300">
+            Available for Projects & Freelance Collaborations
+          </span>
+        </div>
+
+        <!-- Signature Arched PORTFOLIO Title -->
+        <h1 class="hero-arched-title select-none uppercase tracking-tight">
+          PORTFOLIO
+        </h1>
+
+        <!-- Parth Solanki Subtitle -->
+        <div class="relative -mt-3 sm:-mt-6 mb-6">
+          <h2 class="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-100 to-zinc-400 drop-shadow-md">
+            Parth Solanki
+          </h2>
+          <div class="h-1 w-28 bg-gradient-to-r from-transparent via-red-600 to-transparent mx-auto mt-2"></div>
+        </div>
+
+        <!-- Tagline / Mission -->
+        <p class="max-w-2xl text-zinc-300 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-10">
+          Crafting high-retention video edits, viral storytelling, and cinematic trailers that capture attention and grow brands.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="#client-work" class="glow-red-button px-8 py-3.5 rounded-xl text-white font-bold text-sm uppercase tracking-wider flex items-center gap-2">
+            <span>Explore Works</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+          </a>
+          <button class="copy-email-btn px-7 py-3.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-white font-bold text-sm border border-white/10 hover:border-red-500/50 transition-all flex items-center gap-2">
+            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>Get in Touch</span>
+          </button>
+        </div>
+
+        <!-- Metrics Strip -->
+        <div class="mt-16 w-full max-w-4xl grid grid-cols-2 md:grid-cols-4 gap-4 pt-10 border-t border-white/10">
+          <div class="glass-card p-4 rounded-2xl text-center glow-border">
+            <div id="stat-years" class="font-anton text-3xl sm:text-4xl text-red-500 tracking-wide">4+</div>
+            <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1 font-semibold">Years Experience</div>
+          </div>
+          <div class="glass-card p-4 rounded-2xl text-center glow-border">
+            <div id="stat-views" class="font-anton text-3xl sm:text-4xl text-red-500 tracking-wide">100M+</div>
+            <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1 font-semibold">Views Generated</div>
+          </div>
+          <div class="glass-card p-4 rounded-2xl text-center glow-border">
+            <div id="stat-projects" class="font-anton text-3xl sm:text-4xl text-red-500 tracking-wide">250+</div>
+            <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1 font-semibold">Projects Done</div>
+          </div>
+          <div class="glass-card p-4 rounded-2xl text-center glow-border">
+            <div class="font-anton text-3xl sm:text-4xl text-red-500 tracking-wide">4K</div>
+            <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1 font-semibold">Master Quality</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zinc-500 hover:text-red-400 transition-colors animate-bounce flex flex-col items-center gap-1">
+        <span class="text-[10px] uppercase font-bold tracking-widest">Scroll</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </a>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 2: ABOUT & ARSENAL -->
+    <!-- ======================================================== -->
+    <section id="about" class="py-24 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/40">
+          About The Creator
+        </span>
+        <h2 class="font-anton text-4xl sm:text-5xl md:text-6xl uppercase tracking-wider text-white mt-3">
+          Parth Solanki
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2">
+          Specializing in video pacing, sound architecture, and high-conversion content.
+        </p>
+      </div>
+
+      <!-- Main About Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+        
+        <!-- Profile / Cutout Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden glass-card glow-border p-6 sm:p-8 flex flex-col items-center text-center">
+            
+            <!-- Red Ambient Glow Behind Cutout -->
+            <div class="absolute -top-10 -left-10 w-48 h-48 bg-red-600/25 blur-3xl rounded-full"></div>
+            
+            <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-2 border-red-500/40 shadow-[0_0_30px_rgba(225,29,72,0.3)] bg-gradient-to-b from-red-950/40 to-black p-2 mb-6">
+              <img 
+                src="assets/clean/profile-cutout.png" 
+                alt="Parth Solanki"
+                class="w-full h-full object-cover object-top rounded-full filter contrast-105"
+                onerror="this.src='assets/clean/profile-cutout-alt.png'"
+              />
+            </div>
+
+            <h3 class="font-anton text-2xl tracking-wide text-white">Parth Solanki</h3>
+            <p class="text-red-400 text-xs font-semibold uppercase tracking-wider mt-1">Video Editor & Storyteller</p>
+
+            <!-- Social Links Strip -->
+            <div class="flex items-center gap-3 mt-6 pt-6 border-t border-white/10 w-full justify-center">
+              <a href="https://www.instagram.com/_parthedits.___" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-zinc-900 hover:bg-red-950 text-zinc-300 hover:text-white border border-white/10 hover:border-red-500/40 transition-all" title="Instagram">
+                <img src="assets/clean/instagram-icon.png" alt="Instagram" class="w-5 h-5 object-contain">
+              </a>
+              <a href="https://www.youtube.com/@Parthedits" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-zinc-900 hover:bg-red-950 text-zinc-300 hover:text-white border border-white/10 hover:border-red-500/40 transition-all" title="YouTube">
+                <img src="assets/clean/youtube-icon.svg" alt="YouTube" class="w-5 h-5 object-contain">
+              </a>
+              <button class="copy-email-btn p-2.5 rounded-xl bg-zinc-900 hover:bg-red-950 text-zinc-300 hover:text-white border border-white/10 hover:border-red-500/40 transition-all" title="Copy Email">
+                <img src="assets/clean/email-icon.svg" alt="Email" class="w-5 h-5 object-contain">
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bio & Contact Column -->
+        <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+          <div id="bio-container" class="glass-card p-6 sm:p-8 rounded-3xl glow-border">
+            <!-- Injected by app.js -->
+          </div>
+
+          <!-- Contact Quick Access -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="glass-card p-4 rounded-2xl glow-border">
+              <div class="text-[11px] uppercase tracking-wider text-red-400 font-bold">Email Directly</div>
+              <button class="copy-email-btn text-left text-xs text-white font-medium hover:text-red-400 transition-colors truncate block mt-1 w-full" title="Click to copy">
+                parthedits.contact@gmail.com
+              </button>
+            </div>
+            <a href="https://www.instagram.com/_parthedits.___" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-2xl glow-border block group">
+              <div class="text-[11px] uppercase tracking-wider text-red-400 font-bold">Instagram</div>
+              <div class="text-xs text-white font-medium group-hover:text-red-400 transition-colors mt-1">
+                @_parthedits.___
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@Parthedits" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-2xl glow-border block group">
+              <div class="text-[11px] uppercase tracking-wider text-red-400 font-bold">YouTube</div>
+              <div class="text-xs text-white font-medium group-hover:text-red-400 transition-colors mt-1">
+                Parthedits
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Softwares & Core Skills 2-Column Showcase -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Softwares (Left 5 Cols) -->
+        <div class="lg:col-span-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-anton text-2xl tracking-wider uppercase text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span>
+              Softwares & Tools
+            </h3>
+            <span class="text-xs text-zinc-500">Industry Standard</span>
+          </div>
+          <div id="software-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3.5">
+            <!-- Injected by app.js -->
+          </div>
+        </div>
+
+        <!-- Core Skills (Right 7 Cols) -->
+        <div class="lg:col-span-7">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-anton text-2xl tracking-wider uppercase text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span>
+              Core Creative Skills
+            </h3>
+            <span class="text-xs text-zinc-500">Mastered Capabilities</span>
+          </div>
+          <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <!-- Injected by app.js -->
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 3: JOURNEY & TABLE OF CONTENTS -->
+    <!-- ======================================================== -->
+    <section id="journey" class="py-24 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Experience Timeline (7 Cols) -->
+        <div class="lg:col-span-7">
+          <div class="mb-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/40">
+              Career Timeline
+            </span>
+            <h2 class="font-anton text-4xl sm:text-5xl uppercase tracking-wider text-white mt-3">
+              Experience & Milestones
+            </h2>
+            <p class="text-zinc-400 text-sm mt-1">Over 4 years of continuous evolution and client impact.</p>
+          </div>
+
+          <!-- Timeline Container -->
+          <div class="relative border-l-2 border-red-900/50 ml-3">
+            <div id="timeline-container">
+              <!-- Injected by app.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Table of Contents & Quick Jump (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-start">
+          <div class="sticky top-28">
+            <div class="mb-8">
+              <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/40">
+                Navigation
+              </span>
+              <h2 class="font-anton text-3xl sm:text-4xl uppercase tracking-wider text-white mt-3">
+                Table Of Contents
+              </h2>
+              <p class="text-zinc-400 text-sm mt-1">Quickly jump to any category of work.</p>
+            </div>
+
+            <div id="toc-grid" class="space-y-3">
+              <!-- Injected by app.js -->
+            </div>
+
+            <!-- Client Trust Card -->
+            <div class="mt-8 p-6 rounded-2xl glass-card glow-border bg-gradient-to-br from-red-950/20 to-zinc-900/40">
+              <div class="text-xs font-bold uppercase tracking-wider text-red-400">Featured Collaboration</div>
+              <h4 class="text-white font-bold text-base mt-1">Working with Aditya Birla Group</h4>
+              <p class="text-zinc-400 text-xs mt-1.5 leading-relaxed">
+                Producing professional corporate videos, brand storytelling reels, and high-impact live production assets.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 4: CLIENT'S WORK (Vertical Shorts / Reels) -->
+    <!-- ======================================================== -->
+    <section id="client-work" class="py-24 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/40">
+            Commercial Projects
+          </span>
+          <h2 class="font-anton text-4xl sm:text-5xl uppercase tracking-wider text-white mt-3">
+            Client's Work
+          </h2>
+          <p class="text-zinc-400 text-sm mt-1">High-retention vertical reels edited for businesses and content creators.</p>
+        </div>
+        <div class="mt-4 md:mt-0 text-xs font-medium text-zinc-500">
+          Click any card to play video
+        </div>
+      </div>
+
+      <!-- 3 Vertical Cards Grid -->
+      <div id="client-shorts-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected by app.js -->
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 5: PERSONAL WORK (Marvel & Cinematic Edits) -->
+    <!-- ======================================================== -->
+    <section id="personal-work" class="py-24 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+      
+      <!-- Ambient Glow -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 relative z-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/40">
+            Viral Content
+          </span>
+          <h2 class="font-anton text-4xl sm:text-5xl uppercase tracking-wider text-white mt-3">
+            Personal Work & Marvel Edits
+          </h2>
+          <p class="text-zinc-400 text-sm mt-1">Crafted for YouTube & Instagram with synchronized sound design & VFX.</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="https://www.youtube.com/@Parthedits" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold text-red-400 hover:text-red-300">
+            <span>Visit YouTube Channel</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Vertical Marvel Cards Grid -->
+      <div id="personal-shorts-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+        <!-- Injected by app.js -->
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 6 & 8: FEATURED LONG-FORM & GAMING TRAILERS (16:9) -->
+    <!-- ======================================================== -->
+    <section id="long-form-work" class="py-24 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+      
+      <div class="mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/40">
+          Widescreen 16:9
+        </span>
+        <h2 class="font-anton text-4xl sm:text-5xl uppercase tracking-wider text-white mt-3">
+          Gaming Trailers & Long-Form Productions
+        </h2>
+        <p class="text-zinc-400 text-sm mt-1">Cinematic trailers, fast-paced game montages, and multi-cam podcasts.</p>
+      </div>
+
+      <!-- 2 Major Long-Form Cards -->
+      <div id="longform-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Injected by app.js -->
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 7 & 9: MORE CREATIVE SHORTS / REELS -->
+    <!-- ======================================================== -->
+    <section id="more-reels" class="py-24 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/40">
+            Expanded Showcase
+          </span>
+          <h2 class="font-anton text-4xl sm:text-5xl uppercase tracking-wider text-white mt-3">
+            More Creative Shorts & Reels
+          </h2>
+          <p class="text-zinc-400 text-sm mt-1">Additional social edits highlighting different paces and visual moods.</p>
+        </div>
+      </div>
+
+      <!-- More Shorts Grid (6 items) -->
+      <div id="more-shorts-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <!-- Injected by app.js -->
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 10 & 11: THUMBNAIL DESIGN GALLERY -->
+    <!-- ======================================================== -->
+    <section id="thumbnails-section" class="py-24 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-3 py-1 rounded-full bg-red-950/40 border border-red-900/40">
+          Graphic Design & Visual Hook
+        </span>
+        <h2 class="font-anton text-4xl sm:text-5xl md:text-6xl uppercase tracking-wider text-white mt-3">
+          Thumbnail Mastery
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2">
+          Clickable, high-contrast compositions designed to maximize Click-Through Rates (CTR).
+        </p>
+      </div>
+
+      <!-- Client Thumbnails Subsection -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+          <h3 class="font-anton text-2xl tracking-wider uppercase text-white">Commercial & Creator Thumbnails</h3>
+        </div>
+        <div id="client-thumbnails-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Injected by app.js -->
+        </div>
+      </div>
+
+      <!-- Gaming Thumbnails Subsection -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+          <h3 class="font-anton text-2xl tracking-wider uppercase text-white">Gaming & Esports Thumbnails</h3>
+        </div>
+        <div id="gaming-thumbnails-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Injected by app.js -->
+        </div>
+      </div>
+
+      <!-- Extra Art & Visual Works -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+          <h3 class="font-anton text-2xl tracking-wider uppercase text-white">Concept Art & Cinematic Posters</h3>
+        </div>
+        <div id="extra-thumbnails-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Injected by app.js -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SECTION 12: THANKS FOR WATCHING / CONTACT -->
+    <!-- ======================================================== -->
+    <section id="contact" class="py-28 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5 overflow-hidden">
+      
+      <!-- Ambient Glow Behind CTA -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-red-600/15 blur-[140px] rounded-full pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        
+        <span class="text-xs font-bold uppercase tracking-widest text-red-500 px-4 py-1.5 rounded-full bg-red-950/40 border border-red-900/40">
+          Get In Touch
+        </span>
+
+        <h2 class="font-anton text-5xl sm:text-6xl md:text-7xl uppercase tracking-wider text-white mt-4">
+          Thanks For Watching
+        </h2>
+
+        <p class="text-zinc-300 text-base sm:text-lg max-w-xl mx-auto mt-4 leading-relaxed">
+          Ready to elevate your content with high-retention video editing and cinematic visual storytelling? Let's discuss your vision.
+        </p>
+
+        <!-- Big Interactive Contact Card -->
+        <div class="mt-12 glass-card rounded-3xl p-8 sm:p-12 glow-border max-w-2xl mx-auto text-center">
+          
+          <div class="w-16 h-16 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center mx-auto mb-6 border border-red-500/30 shadow-[0_0_20px_rgba(225,29,72,0.3)]">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+
+          <span class="text-xs uppercase tracking-widest text-zinc-400 font-bold">Direct Email</span>
+          <h3 class="font-display text-2xl sm:text-3xl text-white tracking-wider mt-1 select-all">
+            parthedits.contact@gmail.com
+          </h3>
+
+          <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+            <button class="copy-email-btn glow-red-button px-6 py-3 rounded-xl text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+              <span>Copy Email Address</span>
+            </button>
+            <a href="mailto:parthedits.contact@gmail.com" class="px-6 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-wider border border-white/10 hover:border-red-500/40 transition-all flex items-center gap-2">
+              <span>Send An Email</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Social Channels Row -->
+          <div class="mt-8 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6">
+            <a href="https://www.instagram.com/_parthedits.___" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-semibold text-zinc-300 hover:text-red-400 transition-colors">
+              <img src="assets/clean/instagram-icon.png" alt="Instagram" class="w-4 h-4 object-contain">
+              <span>@_parthedits.___</span>
+            </a>
+            <span class="text-zinc-700">•</span>
+            <a href="https://www.youtube.com/@Parthedits" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-semibold text-zinc-300 hover:text-red-400 transition-colors">
+              <img src="assets/clean/youtube-icon.svg" alt="YouTube" class="w-4 h-4 object-contain">
+              <span>Parthedits</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER -->
+  <!-- ======================================================== -->
+  <footer class="border-t border-white/10 py-8 px-4 sm:px-6 lg:px-8 bg-black/60">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+      <div>
+        © 2026 <span class="text-zinc-300 font-bold">Parth Solanki</span> (Parthedits). All rights reserved.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#hero" class="hover:text-red-400 transition-colors">Back to Top ↑</a>
+        <a href="https://www.instagram.com/_parthedits.___" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors">Instagram</a>
+        <a href="https://www.youtube.com/@Parthedits" target="_blank" rel="noopener noreferrer" class="hover:text-red-400 transition-colors">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- VIDEO MODAL PLAYER -->
+  <!-- ======================================================== -->
+  <div id="video-modal" class="modal-overlay fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative w-full max-w-4xl flex flex-col items-center">
+      
+      <!-- Top Bar: Title & Close -->
+      <div class="w-full flex items-center justify-between mb-3 text-white">
+        <div class="flex items-center gap-2 truncate">
+          <span class="w-2 h-2 rounded-full bg-red-500 shrink-0"></span>
+          <span id="video-modal-title" class="font-bold text-sm sm:text-base truncate">Playing Video</span>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a id="video-modal-direct" href="#" target="_blank" rel="noopener noreferrer" class="text-xs text-zinc-400 hover:text-red-400 underline" title="Open on YouTube">
+            Open on YouTube ↗
+          </a>
+          <button id="close-video-modal" class="p-1.5 rounded-lg bg-zinc-800 text-zinc-300 hover:text-white hover:bg-red-600 transition-colors" aria-label="Close Modal">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Video Container Frame -->
+      <div id="video-modal-box" class="relative w-full max-w-4xl video-16-9 rounded-2xl overflow-hidden bg-black shadow-2xl border border-zinc-800">
+        <iframe 
+          id="video-modal-iframe" 
+          src="" 
+          class="w-full h-full border-0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <p class="text-zinc-500 text-xs mt-3">Press <kbd class="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-300">Esc</kbd> or click outside to close</p>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- IMAGE LIGHTBOX MODAL -->
+  <!-- ======================================================== -->
+  <div id="img-modal" class="modal-overlay fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative max-w-5xl w-full flex flex-col items-center">
+      
+      <!-- Top Controls -->
+      <div class="w-full flex items-center justify-between mb-3 text-white">
+        <div>
+          <span id="img-modal-cat" class="text-xs text-red-400 font-bold uppercase tracking-wider block">Thumbnail</span>
+          <h4 id="img-modal-title" class="font-bold text-sm sm:text-base">Thumbnail Preview</h4>
+        </div>
+        <button id="close-img-modal" class="p-2 rounded-lg bg-zinc-800 text-zinc-300 hover:text-white hover:bg-red-600 transition-colors" aria-label="Close Lightbox">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Full-res Image -->
+      <div class="relative w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-black flex items-center justify-center max-h-[80vh]">
+        <img id="img-modal-view" src="" alt="Full Preview" class="max-w-full max-h-[80vh] object-contain">
+      </div>
+
+      <p class="text-zinc-500 text-xs mt-3">Press <kbd class="px-1.5 py-0.5 bg-zinc-800 rounded text-zinc-300">Esc</kbd> or click outside to close</p>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- TOAST NOTIFICATION -->
+  <!-- ======================================================== -->
+  <div id="copy-toast" class="toast-notice fixed bottom-8 right-8 z-50 px-5 py-3 rounded-xl bg-zinc-900/95 border border-red-500/50 text-white font-semibold text-xs shadow-2xl flex items-center gap-2 backdrop-blur-md">
+    ✓ Copied to clipboard!
+  </div>
+
+  <!-- Scripts -->
+  <script src="portfolio-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

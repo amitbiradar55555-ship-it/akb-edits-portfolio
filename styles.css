@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap');
+
+:root {
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-anton: 'Anton', sans-serif;
+  --font-accent: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  --primary-red: #a6312e;
+  --glow-red: #e11d48;
+  --dark-bg: #080808;
+  --card-bg: rgba(18, 18, 22, 0.75);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--dark-bg);
+  color: #f4f4f5;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--dark-bg);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(166, 49, 46, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 10% 30%, rgba(225, 29, 72, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 90% 70%, rgba(166, 49, 46, 0.09) 0%, transparent 40%);
+  background-attachment: fixed;
+  color: #f4f4f5;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f1514;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-red);
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: var(--font-display);
+}
+.font-anton {
+  font-family: var(--font-anton);
+}
+.font-accent {
+  font-family: var(--font-accent);
+}
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Hero Arched Title */
+.hero-arched-title {
+  font-family: var(--font-anton);
+  font-size: clamp(3.5rem, 11vw, 9.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  color: #a6312e;
+  text-shadow: 
+    0 1px 0 #7e2220,
+    0 2px 0 #671c1a,
+    0 3px 0 #521615,
+    0 4px 0 #3e100f,
+    0 15px 30px rgba(166, 49, 46, 0.5);
+  transform: perspective(600px) rotateX(8deg);
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+.hero-arched-title:hover {
+  transform: perspective(600px) rotateX(2deg) scale(1.02);
+  text-shadow: 
+    0 1px 0 #8c2623,
+    0 2px 0 #7e2220,
+    0 3px 0 #671c1a,
+    0 25px 45px rgba(225, 29, 72, 0.6);
+}
+
+/* Glowing Neon Elements */
+.glow-border {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glow-border:hover {
+  border-color: rgba(225, 29, 72, 0.6);
+  box-shadow: 0 0 25px -5px rgba(225, 29, 72, 0.35);
+}
+
+.glow-red-button {
+  background: linear-gradient(135deg, #a6312e 0%, #7f1d1d 100%);
+  box-shadow: 0 4px 20px rgba(166, 49, 46, 0.45);
+  transition: all 0.3s ease;
+}
+.glow-red-button:hover {
+  background: linear-gradient(135deg, #be3835 0%, #991b1b 100%);
+  box-shadow: 0 8px 30px rgba(225, 29, 72, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Floating Badges Animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+@keyframes floatGentleRev {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(-2deg);
+  }
+}
+
+.animate-float-1 {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+.animate-float-2 {
+  animation: floatGentleRev 6s ease-in-out infinite;
+}
+.animate-float-3 {
+  animation: floatGentle 7s ease-in-out infinite 1s;
+}
+.animate-float-4 {
+  animation: floatGentleRev 5.5s ease-in-out infinite 0.5s;
+}
+
+/* Video Card Ratio & Frame */
+.reel-aspect {
+  aspect-ratio: 9 / 16;
+}
+.video-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(18, 18, 22, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Timeline Vertical Line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 3px;
+  background: linear-gradient(180deg, #a6312e 0%, rgba(166, 49, 46, 0.2) 100%);
+}
+
+@media (min-width: 768px) {
+  .timeline-line-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Modal Backdrop */
+.modal-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Toast Notification */
+.toast-notice {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+}
+.toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Filter Tab Active */
+.tab-btn.active {
+  background: #a6312e;
+  color: #ffffff;
+  border-color: #a6312e;
+  box-shadow: 0 0 15px rgba(166, 49, 46, 0.5);
+}
+
+/* Shine Hover Effect */
+.shine-hover {
+  position: relative;
+  overflow: hidden;
+}
+.shine-hover::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.75s ease-in-out;
+}
+.shine-hover:hover::after {
+  transform: rotate(30deg) translateY(100%);
+}
